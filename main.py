@@ -17,9 +17,11 @@ def convert_temp(temp_celsius:int, target_unit:str) -> int:
         case 'F':
             return (temp_celsius * 9 / 5) + 32
 
+# get user inputs for temps
 desired_temp = int(input('What is the desired temperature in Celsius? '))
 current_temp = int(input('What is the current temperature in Celsius? '))
 
+# output converted temps and decision
 print(f'Current Temp: {convert_temp(current_temp, "C")} C, {convert_temp(current_temp, "K")} K, {convert_temp(current_temp, "F")} F, ')
 print(f'Desired Temp: {convert_temp(desired_temp, "C")} C, {convert_temp(desired_temp, "K")} K, {convert_temp(desired_temp, "F")} F, ')
 print(heating_cooling(int(current_temp), int(desired_temp)))
